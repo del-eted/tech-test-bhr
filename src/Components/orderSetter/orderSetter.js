@@ -1,4 +1,4 @@
-import Sorter from './dataSorter'
+import DataDisplay from '../dataDisplay/dataDisplay'
 import Card from 'react-bootstrap/Card'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
@@ -60,9 +60,10 @@ export default function OrderSetter({unsortedData}) {
         <div>
             <Card className="mb-5 fw-bold">
                 Sort files by:
-            <ButtonGroup className="mb-2">
+            <ButtonGroup className="mb-2" data-testid="orderSetter">
                 {values.map((sortValue, idx) => (
                 <ToggleButton
+                    role='button'
                     key={idx}
                     id={`radio-${idx}`}
                     type="radio"
@@ -78,7 +79,7 @@ export default function OrderSetter({unsortedData}) {
             </Card>
             <Card>
                 {dataSorter(sortingValue)}
-                <Sorter arrayToCheck={sortedData}/>
+                <DataDisplay arrayToCheck={sortedData}/>
             </Card>
 
         </div>

@@ -1,7 +1,7 @@
 import ListGroup from 'react-bootstrap/ListGroup'
 import Accordion from 'react-bootstrap/Accordion'
 
-export default function Sorter({arrayToCheck}) {
+export default function DataDisplay({arrayToCheck}) {
 
     let seperatedFiles = []
     let seperatedFolders = []
@@ -19,9 +19,9 @@ export default function Sorter({arrayToCheck}) {
     const FolderListBuilder = (foldersToList) => {
         return <ListGroup>
 <               Accordion defayltActiveKey="0">
-                <Accordion.Header>
+                <Accordion.Header >
                     <div className="fw-bold">{foldersToList.name}</div></Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body key={foldersToList.name}>
                     {foldersToList.files.map(newArray => FileListBuilder(newArray))}
                 </Accordion.Body>
             </Accordion>

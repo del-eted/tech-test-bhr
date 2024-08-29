@@ -1,6 +1,6 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import OrderSetter from './Components/orderSetter.js'
+import OrderSetter from './Components/orderSetter/orderSetter.js'
 import Container from 'react-bootstrap/Container'
 
 const data = [
@@ -67,8 +67,8 @@ const data = [
 function App() {
   return (
         <div className="App">
-                        <Container className="vh-100 bg-secondary d-flex align-items-center justify-content-center" >
-            <OrderSetter unsortedData={data}/>
+            <Container className="vh-100 bg-secondary d-flex align-items-center justify-content-center" >
+                <OrderSetter unsortedData={data}/>
             </Container>
         </div>
   );
