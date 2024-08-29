@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+This project is built in react and uses React-Bootstrap components for functionality.
+To launch the project, you must cd to the tech-test folder, and run 'npm i' to install the required modules, then 'npm start' to launch react.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project does not contain the requested filter by filename functionality, the logic for which was decided but time constraints have prevented its implimentation in a manner that I would deem of acceptable quality. I have included the logic that would have been used to develop the functionality for the sake of clarity.
+
+There is room for improvement, especially in the layout of components and the logic underneath them, but again time constraints have dictated the quality of the work. What is presented is however functional and of good quality, and I believe a good demonstration of my capabilities.
+
 
 ## Available Scripts
 
