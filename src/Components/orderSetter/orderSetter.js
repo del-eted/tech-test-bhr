@@ -13,9 +13,9 @@ export default function OrderSetter({unsortedData}) {
     const [sortingValue, setRadioValue] = useState('alphabetical');
 
     const values = [
-      { name: 'alphabetical', value: 'alphabetical' },
-      { name: 'size', value: 'size' },
-      { name: 'date', value: 'date' },
+      { value: 'alphabetical' },
+      { value: 'size' },
+      { value: 'date' },
     ];
 
     const dataSeperator = (dataToSeperate) => {
@@ -72,12 +72,12 @@ export default function OrderSetter({unsortedData}) {
                     checked={sortingValue === sortValue.value}
                     onChange={(e) => setRadioValue(e.currentTarget.value)}
                 >
-                {sortValue.name}
+                {sortValue.value}
                 </ToggleButton>
                 ))}
             </ButtonGroup>
             </Card>
-            <Card>
+            <Card data-testid="fileDisplay">
                 {dataSorter(sortingValue)}
                 <DataDisplay arrayToCheck={sortedData}/>
             </Card>
